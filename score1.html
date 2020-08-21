@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="score1.css">
+    <link rel="stylesheet" href="score.css">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript" src="score1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".score_board").hide();
+            $(".admin").addClass("active");
+
+            $(".score").click(function(){
+                $(this).addClass("active");
+                $(".admin").removeClass("active");
+                $(".score_board").show();
+                $(".board").hide();
+            });
+            $(".admin").click(function(){
+                $(this).addClass("active");
+                $(".score").removeClass("active");
+                $(".score_board").hide();
+                $(".board").show();
+            });
+            
+        });
+        $(document).ready(function(){
+            $(".next-btn1").click(function(){
+           $(".step-2").addClass("active");
+           $(".step-1").removeClass("active");
+            });
+            $(".previous-btn1").click(function(){
+           $(".step-1").addClass("active");
+           $(".step-2").removeClass("active");
+            });
+            $(".next-btn2").click(function(){
+           $(".step-3").addClass("active");
+           $(".step-2").removeClass("active");
+            });
+            $(".previous-btn2").click(function(){
+           $(".step-2").addClass("active");
+           $(".step-3").removeClass("active");
+            });
+            $(".next-btn3").click(function(){
+           $(".step-4").addClass("active");
+           $(".step-3").removeClass("active");
+            });
+            $(".previous-btn3").click(function(){
+           $(".step-3").addClass("active");
+           $(".step-4").removeClass("active");
+            });
+            $(".next-btn4").click(function(){
+           $(".step-5").addClass("active");
+           $(".step-4").removeClass("active");
+            });
+            $(".previous-btn4").click(function(){
+           $(".step-4").addClass("active");
+           $(".step-5").removeClass("active");
+            });
+            $(".next-btn5").click(function(){
+           $(".step-6").addClass("active");
+           $(".step-5").removeClass("active");
+          $(".container").width("0px");
+            });
+
+        });
+    </script>
+</head>
+<body>
+<section>
+    <div class="container">
+      <form id="form">
+        <div class="step-1 active">
+            <div class="teams">
+                <input type="text" id="team1" name="team1" placeholder="Enter Team-1 Name....">
+                <label class="tosslabel">Vs</label>
+                <input type="text" id="team2" name="team2" placeholder="Enter Team-2 Name....">
+            </div>
+                <button type="button" class="next-btn1" onclick="game()">Next</button>
+        </div>
+  
+        <div class="step-2">
+            <div class="playerlabel">
+            <label class="label1" id="label1">Team-1</label>
+            <label class="label2" id="label2">Team-2</label>
+        </div>
+          <div class="players">
+         
+            <input type="text" id="player1team1" name="player1" placeholder="Player-1">
+            <input type="text" id="player1team2" name="player1" placeholder="Player-1">
+            <input type="text" id="player2team1" name="player2" placeholder="Player-2">
+            <input type="text" id="player2team2" name="player2" placeholder="Player-2">
+            <input type="text" id="player3team1" name="player3" placeholder="Player-3">
+            <input type="text" id="player3team2" name="player3" placeholder="Player-3">
+            <input type="text" id="player4team1" name="player4" placeholder="Player-4">
+            <input type="text" id="player4team2" name="player4" placeholder="Player-4">
+            <input type="text" id="player5team1" name="player5" placeholder="Player-5">
+            <input type="text" id="player5team2" name="player5" placeholder="Player-5">
+            <input type="text" id="player6team1" name="player6" placeholder="Player-6">
+            <input type="text" id="player6team2" name="player6" placeholder="Player-6">
+            <input type="text" id="player7team1" name="player7" placeholder="Player-7">
+            <input type="text" id="player7team2" name="player7" placeholder="Player-7">
+            <input type="text" id="player8team1" name="player8" placeholder="Player-8">
+            <input type="text" id="player8team2" name="player8" placeholder="Player-8">
+            <input type="text" id="player9team1" name="player9" placeholder="Player-9">
+            <input type="text" id="player9team2" name="player9" placeholder="Player-9">
+            <input type="text" id="player10team1" name="player10" placeholder="Player-10">
+            <input type="text" id="player10team2" name="player10" placeholder="Player-10">
+            <input type="text" id="player11team1" name="player11" placeholder="Player-11">
+            <input type="text" id="player11team2" name="player11" placeholder="Player-11">
+        </div>
+            <div class="button">
+                    <button type="button" class="previous-btn1">Prev</button>
+                    <button type="button" class="next-btn2" onclick="playername()">Next</button>
+            </div>
+    </div>
+  
+    <div class="step-3">
+                    <input type="text" id="overs" name="overs" placeholder="Number Of Overs...">  
+            <div class="toss">
+                    <input type="text" id="toss1" name="team1toss" placeholder="Enter Team-1 Toss Choice">
+                        <label class="tosslabel">Vs</label>
+                    <input type="text" id="toss2" name="team2toss" placeholder="Enter Team-2 Toss Choice">
+                    
+            </div>
+            <label class="tosslabel1"> <i class="fa fa-info-circle"></i>&nbsp;&nbsp;Heads or Tails</label>
+            <div class="button">
+                    <button type="button" class="previous-btn2">Prev</button>
+                    <button type="button" class="next-btn3" onclick="toss()">Next</button>
+            </div>
+    </div>
+    <div class="step-4">
+            <div id="tosswin">
+                
+            </div>
+            <input type="text" id="choice" style="width:100%" name="playchoice" placeholder="">
+            <div class="button">
+                <button type="button" class="previous-btn3">Prev</button>
+                <button type="button" class="next-btn4" onclick="match()">Next</button>
+            </div>    
+    </div>
+    <div class="step-5">
+            <input type="text" id="1bowlername" style="width:100%" name="bowlername" placeholder="Who is Going To Ball First......?">
+            <div class="button">
+                <button type="button" class="previous-btn4">Prev</button>
+                <button type="button" class="next-btn5" onclick="firstover()">Next</button>
+            </div>    
+    </div>
+        <div class="step-6">
+            <div class="container1">
+                    <div class="tabs1">
+                                    <div class="box1">
+                                            <ul>
+                                            <li class="admin">Admin Home</li>
+                                            <li class="score">Score Board</li>
+                                            </ul>
+                                    </div>
+                            <div class="board">
+                                    <div class="input_field">
+                                        <input type="text" placeholder="Enter Score Here......" class="input" id="input1" name="input">
+                                    </div>
+                                    <div class="btn">
+                                        <button type="button" class="button1" onclick="play()">Submit</button>
+                                    </div>
+                            </div>
+                                    <div class="score_board">
+                                        <label class="main" id="main"></label>
+                                        <label class="overs1" id="overs1"></label>
+                                        <label class="bat1" id="bat1"></label>
+                                        <label class="bat2" id="bat2"></label>
+                                        <label class="bowler" id="bowler"></label>
+                                    </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="overup">
+            <div class="overup1">
+                OVER UP.....!
+            </div>
+                <input type="text" id="bowlername" style="width:100%" name="bowlername" placeholder="Who Is Going To Ball Next........!">
+                <button type="button" class="button2" onclick="overup()">Submit</button>
+        </div>
+        
+        <div class="secondinnings">
+            <div class="inningsover">
+                Innings Break
+                <button class="reset" type="button" onclick="resetvalues()">Let's Begin 2nd Innings</button>
+            </div>
+        </div>
+        <div class="runout">
+            <div class="outname">
+                Runout
+                <input type="text" id="runout" style="width:100%" placeholder="who Failed To Reach Grease......!!">
+                <button class="runout reset" type="button" onclick="runout1()">submit</button>
+            </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

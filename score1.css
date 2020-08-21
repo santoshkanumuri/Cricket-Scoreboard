@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,800;1,400;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+  }
+ 
+  section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(5, 5, 5, 0.897);
+  }
+  .container {
+    max-width: 800px;
+    width: 60%;
+    padding: 20px;
+    box-shadow: 0px 0px 20px #00000020;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.911);
+  }
+  .step-3,.step-1{
+      width:auto;
+      display:flex;
+      justify-content: space-between;
+  }
+  .step {
+    display: none;
+  }
+  .step.active {
+    display: block;
+  }
+  .step-1,.step-2,.step-3,.step-4,.step-5,.step-6{
+    display: none;
+    
+  }
+  
+  input {
+    width: 40%;
+    border: 1.5px solid rgba(104, 102, 102, 0.562);
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+  
+  .next-btn1,.next-btn2,.next-btn3,.next-btn4,.next-btn5,
+  .previous-btn1,.previous-btn2,.previous-btn3,.previous-btn4,
+  .submit-btn,.next-btn3 {
+    float: right;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background-color: rgb(140, 10, 192);
+    color:white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  .button,.toss,.teams{
+      display:flex;
+      justify-content: space-between;
+  }
+  .label1{
+    font-size: 24px;
+    margin-top: 25px;
+    padding:100px;
+  }
+  .label2{
+    font-size: 24px;
+    margin-top: 25px;
+    padding-left:250px;
+  }
+
+  .players{
+      padding:20px;
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-basis: 2fr;
+  }
+  #overs{
+      width:100%;
+  }
+  .tosslabel{
+    font-size: 24px;
+    margin-top: 25px;
+  }
+  .tosslabel1{
+    margin: 5px;
+    color:rgba(0, 0, 0, 0.822);
+  }
+  .overup1{
+    font-size: 50px;
+    padding:20px;
+    padding-bottom: 0px;
+    margin:10px;
+    text-align: center;
+    color:rgba(255, 0, 0, 0.897)
+  }
+  #tosswin{
+    width:100%;
+    display: flex;
+    font-size: 60px;
+    font-weight: bolder;
+    padding:20px;
+    padding-left:50px;
+    animation: 20s blink infinite;
+    align-items: center;
+    align-content: space-between;
+  }
+  @keyframes blink{
+    0%{
+      color:rgba(255, 255, 255, 0.911);
+    }
+    40%{
+      color:rgba(0, 0, 0, 0.822);
+    }
+    60%{
+      color:rgba(255, 255, 255, 0.911);
+    }
+    100%{
+      color:rgba(0, 0, 0, 0.822);
+    }
+  }
+  .button2{
+    margin:15px auto;
+    margin-top:20px;
+    background-color: crimson;
+    padding: 10px 20px;
+    color:white;
+    width:40%;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+}
+.overup{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+  flex-direction: column;
+  display:none;
+}
+.outname{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+  flex-direction: column;
+  display:flex;
+  font-weight: bolder;
+  font-size: 60px;
+  display:none;
+}
+
+.overupactive{
+  display: flex;
+}
+.active {
+  display: block;
+}
