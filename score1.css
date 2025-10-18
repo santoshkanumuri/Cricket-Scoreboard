@@ -1,174 +1,176 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,800;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800;900&display=swap');
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
-  }
- 
-  section {
+    outline: none;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+section {
     min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(5, 5, 5, 0.897);
-  }
-  .container {
-    max-width: 800px;
-    width: 60%;
-    padding: 20px;
-    box-shadow: 0px 0px 20px #00000020;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.911);
-  }
-  .step-3,.step-1{
-      width:auto;
-      display:flex;
-      justify-content: space-between;
-  }
-  .step {
-    display: none;
-  }
-  .step.active {
+    background-color: #f0f2f5;
+}
+
+.container {
+    max-width: 900px;
+    width: 90%;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.setup-section, .game-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.teams, .toss-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.players-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.team-players {
+    width: 48%;
+}
+
+.team-players label {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 10px;
     display: block;
-  }
-  .step-1,.step-2,.step-3,.step-4,.step-5,.step-6{
-    display: none;
-    
-  }
-  
-  input {
-    width: 40%;
-    border: 1.5px solid rgba(104, 102, 102, 0.562);
-    padding: 5px;
-    font-size: 18px;
-    margin-top: 5px;
-    border-radius: 4px;
-    margin-top: 20px;
-  }
-  
-  .next-btn1,.next-btn2,.next-btn3,.next-btn4,.next-btn5,
-  .previous-btn1,.previous-btn2,.previous-btn3,.previous-btn4,
-  .submit-btn,.next-btn3 {
-    float: right;
-    margin-top: 20px;
-    padding: 10px 30px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 12px 30px;
     border: none;
     outline: none;
-    background-color: rgb(140, 10, 192);
-    color:white;
+    background-color: #007bff;
+    color: white;
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
-    
-  }
-  .button,.toss,.teams{
-      display:flex;
-      justify-content: space-between;
-  }
-  .label1{
-    font-size: 24px;
-    margin-top: 25px;
-    padding:100px;
-  }
-  .label2{
-    font-size: 24px;
-    margin-top: 25px;
-    padding-left:250px;
-  }
-
-  .players{
-      padding:20px;
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      flex-basis: 2fr;
-  }
-  #overs{
-      width:100%;
-  }
-  .tosslabel{
-    font-size: 24px;
-    margin-top: 25px;
-  }
-  .tosslabel1{
-    margin: 5px;
-    color:rgba(0, 0, 0, 0.822);
-  }
-  .overup1{
-    font-size: 50px;
-    padding:20px;
-    padding-bottom: 0px;
-    margin:10px;
-    text-align: center;
-    color:rgba(255, 0, 0, 0.897)
-  }
-  #tosswin{
-    width:100%;
-    display: flex;
-    font-size: 60px;
-    font-weight: bolder;
-    padding:20px;
-    padding-left:50px;
-    animation: 20s blink infinite;
-    align-items: center;
-    align-content: space-between;
-  }
-  @keyframes blink{
-    0%{
-      color:rgba(255, 255, 255, 0.911);
-    }
-    40%{
-      color:rgba(0, 0, 0, 0.822);
-    }
-    60%{
-      color:rgba(255, 255, 255, 0.911);
-    }
-    100%{
-      color:rgba(0, 0, 0, 0.822);
-    }
-  }
-  .button2{
-    margin:15px auto;
-    margin-top:20px;
-    background-color: crimson;
-    padding: 10px 20px;
-    color:white;
-    width:40%;
-    text-align: center;
-    letter-spacing: 3px;
-    font-weight: bold;
     text-transform: uppercase;
-    border-radius: 8px;
-    outline: none;
-    border: none;
-    font-size: 18px;
-}
-.overup{
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  margin:auto;
-  flex-direction: column;
-  display:none;
-}
-.outname{
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  margin:auto;
-  flex-direction: column;
-  display:flex;
-  font-weight: bolder;
-  font-size: 60px;
-  display:none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
 }
 
-.overupactive{
-  display: flex;
+.btn:hover {
+    background-color: #0056b3;
 }
-.active {
-  display: block;
+
+.vs-label {
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0 20px;
+}
+
+.score-board .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.tab-link.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.tab-content .input-field {
+    display: flex;
+    justify-content: center;
+}
+
+.tab-content .input-field .input {
+    width: 70%;
+    margin-right: 10px;
+}
+
+.score-board .main {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.score-board .overs,
+.score-board .batsman,
+.score-board .bowler {
+    font-size: 22px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
 }
